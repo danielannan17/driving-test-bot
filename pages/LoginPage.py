@@ -12,11 +12,10 @@ class LoginPage(AbstractPage):
         self.url = "https://www.access.service.gov.uk/login/signin/creds"
         self.userField = page.locator("label[for='user_id']")
         self.passwordField = page.locator("label[for='password']")
-        self.submitButton = page.locator('input[type="submit"]')
+        self.submitButton = page.locator('#continue')
 
-    def signIn(self):
+    def fill(self):
         USERNAME = os.getenv('C')
         PASS = os.getenv('P')
         self.userField.fill(USERNAME)
         self.passwordField.fill(PASS)
-        self.submitButton.click()
