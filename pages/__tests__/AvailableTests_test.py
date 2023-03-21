@@ -1,6 +1,6 @@
-import os, pytest
-from playwright.sync_api import Page
-from pages.StartPage import StartPage
+import os, pytest, datetime
+from playwright.sync_api import Page, expect
+from pages.AvailableTestsPage import AvailableTestsPage
 
 @pytest.fixture(scope="function", autouse=True)
 def before_each_after_each(page: Page):
@@ -11,4 +11,8 @@ def before_each_after_each(page: Page):
     # print("afterEach")
 
 def test_gets_all_available_tests(page: Page):
-    pass
+    availableTestsPage = AvailableTestsPage(page)
+    availableTests = availableTestsPage.get_available_dates()
+    assert availableTests[0][0] == 'Ballater'
+    assert availableTests[0][1] == datetime.date(2023, 7, 10)
+    availableTestsPage.reserve_best_test(availableTests)

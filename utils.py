@@ -1,3 +1,4 @@
+import datetime
 def get_date_of_week(date_str, day_of_week_str):
     # Parse the input date string into a datetime object
     date = datetime.datetime.strptime(date_str, '%dth %b %Y').date()
@@ -22,7 +23,7 @@ def get_start_date(string):
     return date_str
 
 
-def get_unique_xpath(tag: Tag) -> str:
+def get_unique_xpath(tag):
     """
     Given a BeautifulSoup Tag object, returns a unique XPath expression
     that can be used as a locator in Playwright.
@@ -31,7 +32,7 @@ def get_unique_xpath(tag: Tag) -> str:
         return ''
 
     # Initialize the XPath expression with the tag name
-    xpath = tag.name
+    xpath = ''
 
     # Add indices to the XPath expression until it's unique
     while tag.parent:
@@ -45,5 +46,6 @@ def get_unique_xpath(tag: Tag) -> str:
             xpath = f"{tag.name}/" + xpath
 
         tag = parent
-
-    return '/' + xpath
+    if xpath[-1] == '/':
+        xpath = xpath[:-1]
+    return '//' + xpath

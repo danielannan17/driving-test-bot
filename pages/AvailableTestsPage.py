@@ -2,11 +2,12 @@ import datetime
 from bs4 import BeautifulSoup
 from playwright.sync_api import Page
 from pages.AbstractPage import AbstractPage
-from utils import get_date_of_week, get_unique_xpath
+from utils import get_date_of_week, get_unique_xpath, get_start_date
 
 
 class AvailableTestsPage(AbstractPage):
-    def __init__(self, page, earliestDate):
+    def __init__(self, page):
+        super().__init__(page)
         self.url = "https://www.gov.uk/book-pupil-driving-test"
         self.weekStart = None
         
@@ -17,27 +18,22 @@ class AvailableTestsPage(AbstractPage):
 
     def get_available_dates(self):
             # Assertions use the expect API.
-        table = page.locator('#browseslots').inner_html()
-        soup = BeautifulSoup(table, 'html.parser')
+        soup = BeautifulSoup(self.page.locator('html').inner_html(), 'html.parser')
         availableDates = []
-        for slot in soup.find_all('.day.slotsavailable'):
-            day = slot['headers'] # Return day of the week
+        for slot in soup.find_all(class_= 'day slotsavailable'):
+            day = slot['headers'][0] # Return day of the week
             startDate = get_start_date(self.currentWeekText.inner_text())
             date = get_date_of_week(startDate, day) # calculate date based on headers and week beginning
             
             anchorTag = slot.find('a')
-            testCentre = slot.find_previous_sibling('#testcentre') # find sibling with id = testcentre
-            testCentreName = testCentre.find('span.bold') # Read text from first span tag to get centre
+            testCentre = slot.find_previous_sibling(class_='testcentre') # find sibling with id = testcentre
+            testCentreName = testCentre.find(class_='bold').text # Read text from first span tag to get centre
             # TODO Check if date and test centre match criterita 
-            availableDates.append((testCentreName, date, anchorTag))# Store all the information in an array
+            availableDates.append((testCentreName, date, anchorTag)) # Store all the information in an array
         return availableDates
 
     def reserve_best_test(self, availableDates):
-        if len(availableDates > 0):
+        if len(availableDates) > 0:
             # TODO Sort array based on test centre and date
-            page.locator(get_unique_xpath(availableDates[0])).click() # Click first element anchor tag
-
-    def find_next_available_test(self):
-        self.nextAvailableButton.click()
-        # for each test centre in specific order
-        # read .day.slotsavailable
+            print(get_unique_xpath(availableDates[0][2]))
+            self.page.locator(get_unique_xpath(availableDates[0][2])).click() # Click first element anchor tag
