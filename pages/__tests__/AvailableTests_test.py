@@ -6,11 +6,9 @@ from pages.StartPage import StartPage
 def before_each_after_each(page: Page):
     # print("beforeEach")
     # Go to the starting url before each test.
-    page.goto(os.path.dirname(os.path.realpath(__file__)) + '/assets/StartPage.html')
+    page.goto(os.path.dirname(os.path.realpath(__file__)) + '/assets/AvailableTests.html')
     yield
     # print("afterEach")
 
-def test_start_button(page: Page):
-    # Assertions use the expect API.
-    startPage = StartPage(page)
-    startPage.start()
+def test_gets_all_available_tests(page: Page):
+    pass
