@@ -1,0 +1,21 @@
+function loadAnalytics(){
+    var script_tag = document.getElementById('gtag');
+    var propertyId = script_tag.getAttribute("ga4MeasurementId");
+
+    if (propertyId) {
+        var imported = document.createElement('script');
+        imported.src=`https://www.googletagmanager.com/gtag/js?id=${propertyId}`;
+        document.head.appendChild(imported);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', propertyId);
+    } else {
+        log.debug('Unable to load GA4 Property');
+    }
+}
+
+if (cookieManager.isCategoryOn(cookieManagerConfig, 'analytics')) {
+    loadAnalytics();
+}

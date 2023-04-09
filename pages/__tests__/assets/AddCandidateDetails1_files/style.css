@@ -1,0 +1,2416 @@
+/** Because of the way blueprint centres everything in IE6, we need to ensure this doesn't get cleared. */
+.ie6 .centre {
+    text-align: center !important 
+}
+
+.centre {
+    text-align: center
+}
+
+.ie6 .right {
+	text-align: right !important
+}
+
+/** GENREAL CLASSES **/
+.right {
+    text-align: right
+}
+
+.floatleft {
+    float: left
+}
+
+.floatright {
+    float: right
+}
+
+.padded {
+    padding: 12px;
+}
+
+.relative {
+    position: relative
+}
+
+.normal {
+    font-weight: normal;
+    font-style: none
+}
+
+.bold {
+    font-weight: bold
+}
+
+.italic {
+    font-style: italic
+}
+
+.displayNone {
+    display:none !important;
+}
+
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
+/*General colour settings */
+body {
+    background: white;
+}
+body,h1,h2,h3,h4,h5,h6,table,input,select,textarea {
+    color: black;
+    font-family:Arial, sans-serif
+}
+
+/* General link settings */
+a,.notice a,.info a {
+    color: #009;
+    cursor:pointer
+}
+
+a:hover,a:focus,a:active {
+    color: #060;
+}
+a:focus {
+    background-color:yellow
+}
+
+a.help {
+    padding: 2px 20px 2px 0;
+    background: url('img/help.png') right 50% no-repeat
+}
+
+a.nolink,a.nolink:hover,a.nolink:focus,a.nolink:active {
+    text-decoration: none;
+    color: #111
+}
+
+.raquo {
+    padding-right: 9px !important;
+    background: url('img/raquo.gif') right center no-repeat
+}
+
+.laquo {
+    padding-left: 9px;
+    background: url('img/laquo.gif') left center no-repeat
+}
+
+.border-right {
+    padding-right: 3px;
+    margin-right: 3px;
+    border-right: 1px solid #111
+}
+
+.hidden, .skip {
+    position: absolute;
+    top: -99999px;
+    overflow:hidden;
+    width:0;
+    height:0;
+}
+
+.skip:focus,.skip:hover,.skip:active {
+    top: 0;
+    z-index: 100;
+    width:auto;
+    height:auto
+}
+
+/** OVERRIDE BLUEPRINT FONT-SIZES FOR HEADINGS **/
+h1 {
+    font-weight:normal;
+    font-size:2.2em;
+    color: #444;
+    padding: .5em 0 .7em;
+    margin: 0
+}
+
+h2 {
+    font-size: 1.7em
+}
+
+.defaultContainer .tabbed h2 {
+    padding-bottom:.75em;
+    margin:0 0 1.25em;
+    border-bottom:1px solid #ddd
+}
+
+.separator {
+    padding-bottom:.75em;
+    margin:0 0 1.25em;
+    border-bottom:1px solid #ddd;
+    width: 100%
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: bold
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: bold
+}
+
+.error {
+    font-weight: bold
+}
+
+.success {
+    border-color: #070;
+    font-weight: bold;
+    background: #ded;
+    color: #111
+}
+
+.info {
+	background:#DAF3FD;
+	color:#104680
+}
+
+.info h4 {
+    color: #205791
+}
+
+.notice h4 {
+    color: #514721
+}
+
+.greyinfo {
+    border: 2px solid #ddd;
+    background: #eee;
+    color: #111
+}
+
+.greyinfo,.error,.success,.info,.notice {
+    margin-bottom: 1.5em;
+    padding: 9px
+}
+
+.greyinfo h4,.error h4,.success h4,.info h4,.notice h4 {
+    margin-bottom: 9px
+}
+
+.greyinfo p,.error p,.success p,.info p,.notice p {
+    margin: 0
+}
+
+.borderlessinfo {
+    border: none
+}
+
+.searchcriteriatext {
+    font-size: 115%;
+}
+
+.largetext {
+    font-size: 1.5em
+}
+
+.smalltext {
+    font-size: 0.8em
+}
+
+img {
+    vertical-align:middle
+}
+
+img.header-img {
+    vertical-align: baseline;
+    margin-right: 5px;
+}
+
+
+/*** 32x32 Icons ***/
+.clockIcon {
+    background-position:4px center;
+    background-repeat:no-repeat;
+    padding-left:40px !important;
+}
+/*** 16x16 Icons ***/
+.ie6 .bookIcon,.ie6 .calendarIcon,.ie6 .deleteIcon,.ie6 .downloadIcon,.ie6 .editIcon,.ie6 .groupIcon,.ie6 .helpIcon,.ie6 .hideIcon,.ie6 .homeIcon,.ie6 .infoIcon,.ie6 .lockIcon,.ie6 .poundIcon,.ie6 .showIcon,.ie6 .tickIcon,.ie6 .untickedIcon,.ie6 .warningIcon {
+    display:inline;
+    height:16px;
+}
+.bookIcon,.calendarIcon,.deleteIcon,.downloadIcon,.editIcon,.groupIcon,.helpIcon,.hideIcon,.homeIcon,.infoIcon,.lockIcon,.poundIcon,.showIcon,.tickIcon,.untickedIcon,.warningIcon {
+    background-position:4px center;
+    background-repeat:no-repeat;
+    padding-left:24px !important;
+    display:inline-block;
+    min-height:16px
+}
+/*** Reset back to block level elements where they are part of .notice, .info etc.***/
+.ie6 div.poundIcon,div.poundIcon, .ie6 div.tickIcon,div.tickIcon, .ie6 div.warningIcon, div.warningIcon {
+    display:block
+}
+/*** Individual icons ***/
+.ie6 .bookIcon {height:0}
+.bookIcon {display: block;min-height:0}
+
+.ie6 .calendarIcon {background-image:url('img/calendarIcon.gif')}
+.calendarIcon {background-image:url('img/calendarIcon.png');height:16px;display:inline-block;vertical-align:middle;cursor:pointer;display:none}
+
+.ie6 .clockIcon {background-image:url('img/clockIcon.gif')}
+.clockIcon {background-image:url('img/clockIcon.png')}
+
+.ie6 .deleteIcon {background-image:url('img/deleteIcon.gif')}
+.deleteIcon {background-image:url('img/deleteIcon.png');height:16px;display:inline-block}
+
+.ie6 .downloadIcon {background-image:url('img/downloadIcon.gif')}
+.downloadIcon {background-image:url('img/downloadIcon.png')}
+
+.ie6 .editIcon {background-image:url('img/editIcon.gif')}
+.editIcon {background-image:url('img/editIcon.png')}
+
+.ie6 .groupIcon {background-image:url('img/groupIcon.gif')}
+.groupIcon {background-image:url('img/groupIcon.png')}
+
+.ie6 .helpIcon {background-image:url('img/helpIcon.gif')}
+.helpIcon {background-image:url('img/helpIcon.png');min-height:16px;display:inline-block;vertical-align:middle}
+
+.ie6 .hideIcon {background-image:url('img/hideIcon.gif')}
+.hideIcon {background-image:url('img/hideIcon.png')}
+
+.ie6 .homeIcon {background-image:url('img/homeIcon.gif');height:0}
+.homeIcon {background-image:url('img/homeIcon.png');display: block;min-height:0}
+
+.ie6 .infoIcon {background-image:url('img/infoIcon.gif')}
+.infoIcon {background-image:url('img/infoIcon.png');min-height:16px;display:inline-block;vertical-align:middle}
+
+.ie6 .lockIcon { background-image:url('img/lockIcon.gif')}
+.lockIcon {background-image:url('img/lockIcon.png')}
+
+.ie6 .poundIcon {background-image:url('img/poundIcon.gif')}
+.poundIcon {background-image:url('img/poundIcon.png')}
+
+.ie6 .showIcon {background-image:url('img/showIcon.gif')}
+.showIcon {background-image:url('img/showIcon.png')}
+
+.ie6 .tickIcon {background-image:url('img/tickIcon.gif')}
+.tickIcon {background-image:url('img/tickIcon.png')}
+
+.ie6 .untickedIcon {background-image:url('img/untickedIcon.gif')}
+.untickedIcon {background-image:url('img/untickedIcon.png')}
+
+.ie6 .warningIcon {background-image:url('img/warningIcon.gif')}
+.warningIcon {background-image:url('img/warningIcon.png');min-height:16px;display:inline-block;vertical-align:middle}
+
+/** BLUEPRINT OVERRIDE Make .last carry over any changes to the margin **/
+.last {
+    margin-right: 0 !important
+}
+
+/** ******************** GOV UK BRANDING ******************** */
+#gov-uk-branding {
+    background:rgba(0,0,0,1);
+    padding:6px 0}
+.ie #gov-uk-branding {
+	background:#333}
+	
+#gov-uk-branding .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 81%}
+
+#gov-uk-branding a {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size:1.2em;
+    color:#fff;
+    text-decoration:none}
+
+#gov-uk-branding a:focus {
+	background-color:#777
+}
+
+#userlinks { 
+    list-style-type:none;
+    margin:0;
+    padding:0}
+
+#userlinks {
+    float:left}
+
+.ie6 #userlinks li, .ie7 #userlinks li {
+	display:inline
+}
+#userlinks li {
+    display:inline-block;
+    margin:0 2em 0 0;
+    padding:2px 0;
+    vertical-align:middle}
+
+#userlinks a:hover,#userlinks a:focus,#userlinks a:active {
+    text-decoration:underline}
+
+#gov-uk-branding a#govuk {
+    float:left;
+    font-size: 2.2em;
+    line-height:1em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-left:1.7em}
+
+#gov-uk-branding a#govuk:focus {
+	background-color:#777
+}
+
+#user-menu {
+    border-top: 10px solid rgba(221, 79, 5, .7);
+    padding: 10px 0 20px;
+}
+.ie #user-menu {
+    border-top: 10px solid #DD7945;
+}
+
+/** ********** MAIN MENU UNDER BRANDING ********** **/
+#menu-section {
+    margin-top:-12px;
+    padding:5px;
+    border-radius:4px;
+}
+
+#mainMenu {
+    background:#557;
+    border-left:8px solid #557;
+    border-right:8px solid #557;
+    border-radius:2px;
+}
+
+/* Main top level menu */
+.ie6 .sf-menu, .ie7 .sf-menu {
+    position:relative;
+    z-index:2
+}
+
+.sf-menu {
+    border-left: 1px solid #777;
+    border-right: 1px solid #777
+}
+
+/* All links in menu */
+.sf-menu a,.sf-menu span {
+    color: #fff;
+    font-weight: bold;
+    border-left: 1px solid #777;
+    padding: 9px 12px;
+    text-decoration: none;
+    display: block
+}
+
+.sf-menu li.first a,.sf-menu li.first span {
+    border-left: none;
+    border-top: none
+}
+
+/* Sub menus */
+.sf-menu ul {
+    width: 21.5em;
+    background: #334;
+    padding: 6px;
+    border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px
+}
+
+.sf-menu li li a {
+    background: #557;
+    border-top: 1px solid #335;
+    border-left: none
+}
+
+.sf-menu li li:first-child a {
+    border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0
+}
+
+.sf-menu li li:last-child a {
+    border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px
+}
+
+.sfHover a {
+    background-color: #334
+}
+
+.sf-menu a:focus,.sf-menu a:hover,.sf-menu a:active {
+    background-color: #334;
+    color: #fff
+}
+
+.sf-menu a.current {
+    background-color: #223;
+    color: #fff
+}
+
+.sf-menu a.help {
+    padding: 9px 32px 9px 12px;
+    background: url('img/help-menu.png') right 50% no-repeat;
+}
+
+.ie6 .sf-menu a.help {
+    background: url('img/help-menu.gif') right 50% no-repeat
+}
+
+#logoutmenu {
+    border-left: none
+}
+
+/** END MAIN MENU UNDER BRANDING **/
+#breadcrumb {
+    padding: .25em 0em;
+    margin: 0
+}
+
+#breadcrumb-src {
+    display: none
+}
+
+#footer-section {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 4px solid #bbb
+}
+
+.paymentBox {
+    border: 4px solid #ddd;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.ie .paymentBox {
+    text-align: center;
+}
+
+/** ADD IN SOME NEW BORDERS FOR STYLING **/
+.colborder-left {
+    padding-left: 24px;
+    margin-left: 15px;
+    border-left: 1px solid #ddd
+}
+
+/** SECONDARY NAVIGATION STYLING **/
+#secondaryNavigation {
+    float: left;
+    width: 100%;
+}
+
+#secondaryNavigation ul {
+    list-style-type: none;
+    padding: 0 10px 0 0;
+    float: left;
+    margin: 0;
+}
+
+.ie6 #secondaryNavigation li, .ie7 #secondaryNavigation li {
+	position:relative
+}
+
+#secondaryNavigation li {
+    float: left;
+    margin-left: 4px
+}
+
+#secondaryNavigation a {
+    display: inline-block;
+    padding: 5px 10px 1px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #111;
+    border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    background: #eee
+}
+
+#secondaryNavigation a:hover,#secondaryNavigation a:focus,#secondaryNavigation a:active {
+    background: #bbb
+}
+
+#secondaryNavigation a.current {
+    color: #111 !important;
+    padding: 1px 10px 5px;
+    margin-bottom: -4px;
+    border-width: 4px 4px 0;
+    border-style: solid;
+    border-color: #557
+}
+
+#secondaryNavigation .tl,#secondaryNavigation .tr {
+    font-size: 0;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    overflow: hidden
+}
+
+#secondaryNavigation .tl {
+    top: 0;
+    left: 0;
+    background: url(img/tab-background.png) top left no-repeat
+}
+
+#secondaryNavigation .tr {
+    top: 0;
+    right: 0;
+    background: url(img/tab-background.png) top right no-repeat
+}
+
+#secondaryNavigation a:hover .tl,#secondaryNavigation a:focus .tl,#secondaryNavigation a:active .tl {
+    top: 0;
+    left: 0;
+    background: url(img/tab-hover.png) top left no-repeat
+}
+
+#secondaryNavigation a:hover .tr,#secondaryNavigation a:focus .tr,#secondaryNavigation a:active .tr {
+    top: 0;
+    right: 0;
+    background: url(img/tab-hover.png) top right no-repeat
+}
+
+#secondaryNavigation a.current .tl {
+    top: -4px;
+    left: -4px;
+    background: url(img/tab-current.png) top left no-repeat !important
+}
+
+#secondaryNavigation a.current .tr {
+    top: -4px;
+    right: -4px;
+    background: url(img/tab-current.png) top right no-repeat !important
+}
+
+.tabbed {
+    border: 4px solid #557;
+    padding: 12px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-bottom: 1.5em
+}
+
+.sr-only {
+    position: absolute;
+    left: -999px
+}
+
+#progressbar {
+    margin: 1em 0;
+    border-bottom: 1px solid #eee
+}
+
+#progressbar h1 {
+    margin: 0 0 .5em;
+    padding: 0
+}
+
+#orderProgress {
+    text-align: center;
+    list-style-type: none;
+    border: none;
+    padding: 0;
+    margin: 1em 0;
+    border-bottom: 4px solid #555
+}
+
+.ie6 #orderProgress .step, .ie7 #orderProgress .step {
+    zoom: 1;
+    display: inline;
+}
+
+#orderProgress .step {
+    display: inline-block;
+    background: #eee url('img/progress-background.png') right center no-repeat;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: .3em 2em .3em 1em;
+    color: #111;
+    text-decoration: none;
+    margin:0 0 1em
+}
+
+#orderProgress .step a {
+    color: #111;
+    display: block
+}
+
+#orderProgress .current {
+    background: #666 url('img/progress-current.png') right center no-repeat;
+    border: 1px solid #fff;
+    color: #fff
+}
+
+#orderProgress .current a {
+    color: #fff;
+    display: block
+}
+
+/** TABLE SETTINGS - full width by default, with padding 6px on each cell. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead th {
+    border-bottom: 4px solid #ddd;
+    background: #eee !important
+}
+
+table thead th,table tbody td,table tfoot td {
+    padding: 6px;
+}
+
+table tfoot td {
+    border-top: 4px solid #ddd;
+}
+
+table tbody td,table tbody th {
+    border-top: 1px solid #ddd;
+    background: #fff
+}
+
+table tbody tr:first-child td {
+    border-top: none
+}
+
+table tbody tr.warn td {
+    background: #FFF6BF
+}
+
+table th.sortable {
+    padding: 0;
+    vertical-align:baseline
+}
+
+table th.sortable a {
+    display: inline-block;
+    padding: 6px 6px 14px;
+    background: url('img/arrow-right.png') center bottom no-repeat
+}
+
+table th.order1 a {
+    padding: 6px 6px 14px;
+    background: url('img/arrow-up.png') center bottom no-repeat
+}
+
+table th.order2 a {
+    padding: 6px 6px 14px;
+    background: url('img/arrow-down.png') center bottom no-repeat
+}
+
+table tr.even td,table tr.even th {
+    background: #f9f9f9
+}
+
+table tr.selected td,table tr.selected th {
+    background: #666;
+    color: white;
+}
+
+#nameTrainerBookingsTable tr {
+    cursor: pointer;
+}
+
+table tr td.remove {
+    text-align: center;
+    width: 18px;
+    padding: 6px
+}
+
+table tr td.searchcriteria {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    border-top: 4px solid #ddd
+}
+
+table tr.first td.searchcriteria {
+    margin-top: 0
+}
+
+table tfoot td.total {
+    background: #555;
+    color: #fff;
+    font-weight: bold
+}
+
+td.noWrap {
+    white-space: nowrap
+}
+
+p.pagination .pagination-numbers a, p.pagination .pagination-numbers strong {
+	display:inline-block;
+	background-color:#eee;
+	padding:0 8px
+}
+
+/** ALLOWS ROUNDED BORDER ON THE TABLE **/
+.roundedBorder-4 {
+    border: 4px solid #ddd;
+    margin-bottom: 1.5em;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.ie .roundedBorder-4 {
+    zoom: 1;
+}
+.ie .roundedBorder-4 .tl,.ie .roundedBorder-4 .tr,.ie .roundedBorder-4 .bl,.ie .roundedBorder-4 .br
+    {
+    font-size: 0;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    overflow: hidden;
+    background-image:url(img/roundedBorder-4-ddd.png);
+    background-repeat:no-repeat;
+    background-color:#fff
+}
+
+.ie6 .roundedBorder-4 .tl,.ie6 .roundedBorder-4 .tr,.ie6 .roundedBorder-4 .bl,.ie6 .roundedBorder-4 .br {
+	background-image:url(img/roundedBorder-4-ddd.gif);
+}
+
+.ie .roundedBorder-4 .tl {
+    top: -4px;
+    left: -4px;
+    background-position: top left;
+}
+
+.ie .roundedBorder-4 .tr {
+    top: -4px;
+    right: -4px;
+    background-position: top right
+}
+
+.ie .roundedBorder-4 .bl {
+    bottom: -4px;
+    left: -4px;
+    background-position: bottom left
+}
+
+.ie .roundedBorder-4 .br {
+    bottom: -4px;
+    right: -4px;
+    background-position: bottom right
+}
+
+.ie .tooltip .roundedBorder-4 .tl, .ie .tooltip .roundedBorder-4 .tr, .ie .tooltip .roundedBorder-4 .bl, .ie .tooltip .roundedBorder-4 .br {
+    background-color:#333
+}
+
+.ie fieldset .roundedBorder-4 .tl, .ie fieldset .roundedBorder-4 .tr, .ie fieldset .roundedBorder-4 .bl, .ie fieldset .roundedBorder-4 .br {
+    background-color:#f9f9f9
+}
+
+.ie fieldset.success .roundedBorder-4 .tl, .ie fieldset.success .roundedBorder-4 .tr, .ie fieldset.success .roundedBorder-4 .bl, .ie fieldset.success .roundedBorder-4 .br {
+    background-color:#ded
+}
+
+.ie .greybox .roundedBorder-4 .tl, .ie .greybox .roundedBorder-4 .tr, .ie .greybox .roundedBorder-4 .bl, .ie .greybox .roundedBorder-4 .br {
+    background-color:#eee
+}
+
+.roundedBorder-4 table {
+    margin: 0;
+}
+
+.editableheading {
+    background: #555;
+    padding: 6px;
+    border-bottom: 4px solid #ddd;
+    border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0
+}
+
+.editableheading h4 {
+    display: inline;
+    color: #fff;
+    margin: 0;
+}
+
+.editableheading a {
+    color: #ddd
+}
+
+.testCentreGroupTable td {
+    width:50%
+}
+
+.testCentreGroupTable td.remove {
+    width:18px
+}
+
+/** FORM STYLES **/
+a:focus,input:focus,select:focus,textarea:focus  {
+    outline:1px solid orange;
+}
+
+input, select, textarea {
+	font-size:1em}
+
+input::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+
+input.checkbox {
+    margin:.5em 0
+}
+
+input.text {
+    padding: 4px;
+    vertical-align: middle
+}
+
+input.mins {
+    width: 50px
+}
+
+input.postcode {
+    width: 80px
+}
+
+input.vrn {
+    width: 80px
+}
+
+input.mm, input.yy {
+    width:18px
+}
+
+input.standarddate, input.weekbeginningdate {
+    width: 70px
+}
+
+input.securitycode, input.amount {
+    width: 60px
+}
+
+input.searchTestCentre {
+    width:200px
+}
+
+input.csv {
+    width: 40px;
+    margin: 0
+}
+
+input.time {
+    text-align: center
+}
+
+select.select {
+    padding: 3px;
+    width:310px;
+    vertical-align: middle
+}
+
+select.hour {
+    width:50px
+}
+
+select.mins {
+    width: 55px
+}
+
+select.searchTestCentre {
+    width:210px
+}
+
+input.error,select.error {
+    background: #FBE3E4;
+    color: #8a1f11;
+    border:1px solid #FBC2C4;
+    margin:0.5em 0
+}
+
+input.disabled {
+    background: #eee
+}
+
+input.readonly {
+    border: none;
+    background: #f9f9f9
+}
+
+select.readonly {
+    border: none
+}
+
+span.required {
+    color: #8A1F11;
+    font-size: 1.2em
+}
+
+span.optional {
+    font-weight: normal
+}
+
+ul.error, ul.error .error {
+    text-align: left;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 10px 195px;
+    background: none;
+    border: none;
+}
+
+#selectedTestCategoryErrorWrapper ul {
+    margin: 0 0 10px 102px;
+}
+
+.breakline ul.error {
+    margin: 0 0 10px 20px;
+}
+ul.error .error {
+    margin:0;
+}
+
+.label-pad {
+    padding-left: 174px
+}
+
+form {
+    margin-bottom: 1.5em
+}
+
+form:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+fieldset {
+    padding: 15px 25px;
+    margin: 0 0 1.5em;
+    background: #f9f9f9;
+    display:block;
+}
+
+.fakefieldset {
+    padding: 15px 25px;
+    margin: 0 auto 1.5em;
+    border: 1px solid #ccc;
+    background: #f9f9f9
+}
+
+legend {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0 6px
+}
+
+legend.calendarIcon {
+    height:auto;display:block;cursor:auto
+}
+
+.ie6 form {
+    text-align: center
+}
+
+.ie6 form * {
+    text-align: left
+}
+
+.ie fieldset {
+    margin: 1em 0 1.5em;
+    padding: 25px 25px 15px;
+    position:relative;
+}
+
+.ie legend {
+    position:absolute;
+    top:-12px;
+    left:17px;
+    padding:0 3px
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 6px
+}
+
+.inputWrapper, .multiSelectWrapper, .checkboxWrapper {
+    margin: 2px 0
+}
+
+.inputWrapperPadded {
+    padding-left: 176px
+}
+
+.inputWrapper label, .multiSelectWrapper label, .checkboxWrapper label {
+    width: 168px;
+    text-align: right;
+}
+
+label.leftAutoWidth {
+    text-align: left;
+    width: auto;
+}
+
+.ie .inputWrapper label {
+    
+}
+
+label {
+    vertical-align: middle
+}
+
+.multiSelectWrapper label {
+    vertical-align:top
+}
+
+.breakline label {
+    display: block;
+    width: auto;
+    margin: .5em 0 0;
+    padding: 0 16px 0 0;
+    text-align: left
+}
+
+.breaklinepadding {
+    padding-top: 26px
+}
+
+.formbubble {
+    position: absolute;
+    top: 450px;
+    left: 300px;
+    width: 310px;
+    padding: 15px 25px;
+    margin: 0 auto 1.5em;
+    border: 1px solid #ccc;
+    background: #f9f9f9 url('img/remove.png') right 6px no-repeat;
+}
+
+.radioWrapperPadded input {
+    margin-left: 158px
+}
+
+.radioWrapper label {
+    padding-right: 0
+}
+
+.paymentRow {
+    padding: 0.8em 0;
+    border: 2px solid #f9f9f9
+}
+
+.paymentRow label {
+    padding-top:2px;
+    padding-bottom:2px
+}
+
+.paymentRow ul.error {
+    margin-left: 650px  
+}
+
+.cardNumber,.cardName,.cardExpiry {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.cardNumber {
+    width: 180px
+}
+
+.cardName {
+    width: 200px
+}
+
+.cardExpiry {
+    width: 175px
+}
+
+.radioPadding {
+    padding-left: 26px
+}
+
+.selectedcard {
+    padding: 0.8em 0;
+    background: #d5edf8;
+    color: #205791;
+    border: 2px solid #92cae4
+}
+
+.expiredcard {
+    color: #8a1f11
+}
+
+.paddedCardNumber {
+    display: inline-block;
+    margin-right: 5px;
+    width: 220px
+}
+
+.cardtype {
+    padding-left: 40px
+}
+
+.cardtype-E {
+    background: url('img/delta.gif') left center no-repeat
+}
+.cardtype-M,.cardtype-B {
+    background: url('img/mastercard.gif') left center no-repeat
+}
+.cardtype-V {
+    background: url('img/visa.gif') left center no-repeat
+}
+.cardtype-Q {
+    background: url('img/electron.gif') left center no-repeat
+}
+
+.ui-datepicker-trigger {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.ui-datepicker-trigger img {
+    height: 1.4em
+}
+
+label.inlinePadded {
+    display: inline;
+    padding-left: 15px
+}
+
+#prefundedCheckbox {
+	margin:0 0 10px 25px
+}
+
+.daterange .daterangeField,.daterange .daterangeButton {
+	float:left;width:140px;
+}
+.daterange .daterangeButton {
+	margin-top:30px
+}
+
+/** FORM STYLES **/
+form.reservetest {
+    position: relative
+}
+
+form.reservetest .releaseSlot {
+    position: absolute;
+    top: 20px;
+    right: 5px
+}
+
+.ie6 form.reservetest .roundedBorder-4,.ie7 form.reservetest .roundedBorder-4 {
+	top:5px
+}
+
+form.reservetest .roundedBorder-4 {
+	margin-top:10px
+}
+
+.ie form.reservetest .edit, .ie form.reservetest .releaseSlot {
+    top: 10px;
+}
+
+form.reservetest .edit {
+    position: absolute;
+    top: 20px;
+    right: 10px
+}
+
+form.reservetest .success input,form.reservetest .success select {
+    background: #ded;
+    color: #111;
+}
+
+form.reservetest .addedToOrder {
+    font-weight: bold
+}
+
+
+#testtimesection {
+    margin:2px 0;
+}
+
+#testcentresection .greyformsectioncolumn {
+    width:245px;
+}
+
+#testcentresection .greyformsectioncolumn select {
+    width:100%;
+    margin-bottom:18px;
+}
+
+#testcentresection .greyformsectioncolumn input {
+    width:234px;
+    margin-bottom:18px;
+}
+
+#testcentresection #or, #testtimesection #to {
+    width: 40px;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#selectBookingTypeContainer #or {
+    font-size: 2em;
+}
+
+.formsectionheading {
+     font-weight: bold;
+     width: 177px
+}
+
+.greyformsection {
+    background:#eee;
+    padding:6px 3px;
+}
+
+.greyformsection {
+    background:#eee;
+    padding:6px 3px;
+}
+
+.greyformsection .greyformsectionheading{
+    font-weight:bold;
+    width:174px
+}
+
+form .showAdvancedSearch,form .hideAdvancedSearch {
+    display: none;
+    text-decoration: underline;
+    color: #009;
+    cursor: pointer
+}
+
+.specialNeedsWidget {
+    margin:.5em 0
+}
+
+.needslist ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:355px
+}
+.needslist ul ul {
+    margin-bottom:12px;
+    width:100%
+}
+.needslist ul ul li {
+    border-top: 1px solid #eee;
+    background: white
+}
+.needslist ul ul li.even {
+    background: #F9F9F9;
+}
+.needslist label {
+    font-weight:normal;
+    display:inline-block;
+    padding:6px;
+    width:315px
+}
+
+/** BROWSE SLOTS TABLE SHOWS A GRID OF DAYS WITH NUMBER OF AVAILABLE SLOTS **/
+#browseslots th {
+    border-left: 1px solid #ddd
+}
+
+#browseslots th .date {
+    display: block;
+    font-size: 1.25em
+}
+
+#browseslots td.testcentre {
+    vertical-align: top;
+    padding: 6px;
+}
+
+#browseslots .testcatfirst td.testcentre {
+    border-top: 4px solid #ddd
+}
+#browseslots .testcatnotfirst td.testcentre {
+    border-top: 1px dashed #ddd
+}
+#browseslots td.remove {
+    vertical-align: top;
+    padding-top: 14px;
+}
+
+#browseslots .testcatfirst td.remove {
+    border-width: 4px 0 0 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+#browseslots .testcatnotfirst td.remove {
+    border-top: 1px solid #fff;
+    border-left:1px solid #ddd;
+}
+
+#browseslots td.day {
+    text-align: center;
+    padding: 0;
+    vertical-align: top;
+}
+
+#browseslots .testcatfirst td.day {
+    border-width: 4px 0 0 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+#browseslots .testcatnotfirst td.day {
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+#browseslots td.day a {
+    display: block;
+    padding: 12px 0 0;
+    width: 46px;
+    font-weight: bold;
+    font-size: 1.25em;
+    background: #070;
+    color: #fff;
+    text-decoration: none
+}
+
+#browseslots td.day a:hover,#browseslots td.day a:focus,#browseslots td.day a:active
+    {
+    background: #393
+}
+
+.ie6 #browseslots td.none a {
+    background: #700 url('img/bell.gif') top right no-repeat;
+}
+
+#browseslots td.none a {
+    background: #700 url('img/bell.png') top right no-repeat;
+}
+
+.ie6 #browseslots td.none a:hover,.ie6 #browseslots td.none a:focus,.ie6 #browseslots td.none a:active {
+    background: #700 url('img/bell.gif') top right no-repeat;
+}
+
+#browseslots td.none a:hover,#browseslots td.none a:focus,#browseslots td.none a:active{
+    background: #933 url('img/bell.png') top right no-repeat;
+}
+
+#browseslots td.nonenonotif a {
+    background: #000;
+}
+
+#browseslots td.nonenonotif a:hover,#browseslots td.nonenonotif a:focus,#browseslots td.nonenonotif a:active{
+    background: #333;
+}
+
+.ie6 #browseslots td.day a .view {
+    height:14px;
+}
+
+#browseslots td.day a .view {
+    display: block;
+    font-size: 0.8em;
+    background: #fff;
+    color: #009;
+    margin-top: 12px;
+    padding-bottom: 6px;
+    text-decoration: underline;
+    min-height: 14px;
+}
+
+#browseslots th.testcentre {
+    width: 100%
+} /* FORCE THE TC COLUMN TO TAKE THE REST OF THE ROOM */
+#browseslots form.inline {
+    line-height: 1.5em;
+}
+
+#browseslots tr.splitsearch td.day a {
+    padding: 6px 0;
+}
+
+#browseslots td.openingday {
+    border-top: 1px dashed #ddd;
+    padding: 0
+}
+
+#browseslots td.openingday .info {
+    margin: 12px 6px;
+    padding: 6px;
+    display: block;
+}
+
+#browseslots td.tblimit {
+    padding: 0
+}
+
+#browseslots td.tblimit .notice {
+    margin: 12px 6px 12px 0;
+    padding: 6px;
+    display: block;
+}
+
+#browseslots td.notsupported {
+    border-top: 1px dashed #ddd;
+    padding: 0
+}
+
+#browseslots td.notsupported .info {
+    margin: 12px 6px;
+    padding: 6px;
+    display: block;
+}
+
+#browseslots-day td,#browseslots-day th {
+    width: 20%;
+}
+
+#browseslots tr.even td {
+    background: #fff
+}
+
+#key {
+    margin: 0 0 1.5em
+}
+
+#key dl {
+    margin-bottom: 0;
+    display: inline;
+}
+
+.ie6 #key #available-text, .ie6 #key #unavailable-notif-text, .ie6 #key #unavailable-text,
+.ie6 #key #available-num, .ie6 #key #unavailable-num, .ie6 #key #unavailable-notif-num,
+.ie7 #key #available-text, .ie7 #key #unavailable-notif-text, .ie7 #key #unavailable-text,
+.ie7 #key #available-num, .ie7 #key #unavailable-num, .ie7 #key #unavailable-notif-num {
+    display:inline;
+    vertical-align:middle
+}
+
+.ie6 #key #available-text, .ie6 #key #unavailable-notif-text, .ie6 #key #unavailable-text,
+.ie7 #key #available-text, .ie7 #key #unavailable-notif-text, .ie7 #key #unavailable-text {
+    margin: 0 12px 0 3px
+}
+
+#key #available-text {
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 0 12px 0 0;
+}
+
+#key #unavailable-notif-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 0 12px 0 0;
+    width: 100px;
+}
+
+#key #unavailable-text {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 0
+}
+
+#key #available-num {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 15px;
+    background: #070;
+    color: #fff
+}
+
+.ie6 #key #unavailable-num {
+    background: #700 url('img/bell.gif') top right no-repeat;
+}
+#key #unavailable-num {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 15px;
+    background: #700 url('img/bell.png') top right no-repeat;
+    color: #fff
+}
+
+#key #unavailable-notif-num {
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 15px;
+    background: #000;
+    color: #fff
+}
+
+/** AGREEMENTS TABLE ON YOUR AGREEMENTS PAGE - columns agreed by and agreed on **/
+table th.auditdata {
+    width: 135px
+}
+
+#viewBookingHistory table td {
+    vertical-align: top
+}
+
+dl.inline dt {
+    float: left;
+    margin-right: .5em;
+}
+
+/** ROUNDED BUTTON / LINKS (ONLY ROUNDED IN CHROME & FF) **/
+span.greenbutton,span.greybutton,span.linkbutton {
+    display: -moz-inline-stack;
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;
+    margin: 0 0.2em;
+    vertical-align: middle
+}
+
+span.linkbutton {
+    padding:3px 0;
+    border:none
+}
+
+.ie6 span.greenbutton,.ie7 span.greenbutton,.ie6 span.greybutton,
+.ie7 span.greybutton,.ie6 span.linkbutton, .ie7 span.linkbutton{
+    zoom: 1
+}
+
+.ie6 span.greenbutton a,.ie6 span.greybutton a {
+	text-align:center
+} 
+
+span.greenbutton a,span.greybutton a {
+    display: block;
+    padding: 4px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+span.greenbutton input.submit,span.greybutton input.submit,span.linkbutton input.submit {
+    display: block;
+    padding: 5px 16px 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    border: none;
+    margin: 0;
+    cursor: pointer
+}
+
+span.greenbutton a,span.greybutton a,span.greenbutton input.submit,span.greybutton input.submit {
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+    box-shadow:0 0 4px #777
+}
+
+span.linkbutton input.submit {
+    background:transparent;
+    padding: 2px 0 3px;
+    text-decoration: underline !important;
+    font-weight: normal;
+    color:#009
+}
+
+.ie6 span.greenbutton input.submit, .ie7 span.greenbutton input.submit,.ie6 span.greybutton input.submit,
+.ie7 span.greybutton input.submit,.ie6 span.linkbutton input.submit, .ie7 span.linkbutton input.submit{
+    text-align: center;
+    width: 1%;
+    overflow: visible;
+    padding: 4px 8px
+}
+
+/** LINK AS BUTTON **/
+span.linkbutton input.submit:hover,span.linkbutton input.hover,span.linkbutton input.submit:focus,span.linkbutton input.submit:active {
+    color: #060;
+}
+
+span.linkbutton input.submit:focus {
+    background-color: yellow;
+}
+
+/** GREEN BUTTON **/
+span.greenbutton a,span.greenbutton input.submit {
+    color: #fff;
+    background: #282
+}
+
+span.greenbutton a:hover,span.greenbutton a:focus,span.greenbutton a:active,
+span.greenbutton input.submit:hover,span.greenbutton input.hover,span.greenbutton input.submit:focus,span.greenbutton input.submit:active
+    {
+    color: #fff;
+    background: #070;
+    box-shadow:0 0 1px #777
+}
+/** GREY BUTTON **/
+span.greybutton a,span.greybutton input.submit {
+    color: #fff;
+    background: #557
+}
+
+span.greybutton a:hover,span.greybutton a:focus,span.greybutton a:active,
+span.greybutton input.submit:hover,span.greybutton input.submit:focus,span.greybutton input.submit:active,span.greybutton input.hover
+    {
+    color: #fff;
+    background-color: #335;
+    box-shadow:0 0 1px #777
+}
+
+span.fullwidthbutton {
+    display: block;
+    margin: 0
+}
+
+span.fullwidthbutton a {
+    padding: 4px 0;
+    text-align: center
+}
+
+span.fullwidthbutton input.submit {
+    padding: 5px 0 6px
+}
+
+.ie6 span.fullwidthbutton input.submit,.ie7 span.fullwidthbutton input.submit{
+    width: 100%;
+}
+
+/** Setup tooltips **/
+.tooltip-icon {cursor:pointer}
+.tooltip {display: none;width: 400px;z-index: 9999;padding:20px}
+
+.ie6 .tooltip-help, .ie6 .tooltip-testcentregroup, .ie6 .tooltip-help-custom {background: url('img/tooltip-arrow-left.gif') left center no-repeat}
+.tooltip-help, .tooltip-testcentregroup, .tooltip-help-custom {background: url('img/tooltip-arrow-left.png') left center no-repeat}
+.ie6 .tooltip-help-left {background: url('img/tooltip-arrow-right.gif') right center no-repeat}
+.tooltip-help-left {background: url('img/tooltip-arrow-right.png') right center no-repeat}
+
+.ie6 .tooltip-error {background: url('img/tooltip-error-arrow-left.gif') left center no-repeat}
+.tooltip-error {background: url('img/tooltip-error-arrow-left.png') left center no-repeat}
+
+.ie6 .tooltip-tcavailability,.ie6 .tooltip-reservedslot {background: url('img/tooltip-arrow-up.gif') top center no-repeat}
+.tooltip-tcavailability,.tooltip-reservedslot {background: url('img/tooltip-arrow-up.png') top center no-repeat}
+.ie6 .tooltip-tcavailability-top {background: url('img/tooltip-arrow-down.gif') bottom center no-repeat}
+.tooltip-tcavailability-top {background: url('img/tooltip-arrow-down.png') bottom center no-repeat}
+
+.ie6 .tooltip-inner, .ie7 .tooltip-inner {
+	text-align:left
+}
+
+.tooltip-inner {
+    padding: 16px;
+    box-shadow: 0px 0px 8px #000;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.tooltip-help .tooltip-inner, .tooltip-tcavailability .tooltip-inner, .tooltip-help-custom .tooltip-inner {
+    background: #333;
+    font-weight:bold;
+    color:#fff;
+}
+
+.tooltip-tcavailability .tooltip-inner table,.tooltip-tcavailability .tooltip-inner .roundedBorder-4 {
+	margin:0
+}
+
+.tooltip-testcentregroup {
+    position:absolute;
+    right:-315px;
+    bottom:0;
+    display:block;
+    width:285px;
+}
+
+.tooltip-testcentregroup .tooltip-inner {
+    background: #333;
+    font-weight:bold;
+    color:#fff;
+}
+
+.tooltip-reservedslot {
+    width:auto;
+    padding:20px 0 0;
+    display:block;
+    position:relative;
+    top:-30px;
+    z-index: 99; /* Must be less that the jquery dialog z-index (defaults to 1000) due to the refine search overlay rendering below the tooltip */
+}
+.tooltip-reservedslot .tooltip-inner {
+    background: #333;
+    font-weight:bold;
+    color:#fff;
+}
+
+.tooltip-help h4, .tooltip-tcavailability h4, .tooltip-testcentregroup h4, .tooltip-reservedslot h4, .tooltip-help-custom h4 {
+    color:#fff
+}
+
+.tooltip-error {
+    background: #fbe3e4;
+    font-weight:bold;
+    color:#8a1f11;
+}
+
+.tooltip span.greybutton {
+    border-color: #ccc
+}
+
+.ie .tooltip span.greybutton .tl,.ie .tooltip span.greybutton .tr,.ie .tooltip span.greybutton .bl,.ie .tooltip span.greybutton .br {
+    background-image:url(img/greybutton-rnd-ccc.png);
+}
+
+.tooltip span.greybutton a,.tooltip span.greybutton input.submit {
+    color: #333;
+    background: #eee
+}
+
+.tooltip span.greybutton a:hover,.tooltip span.greybutton a:focus,.tooltip span.greybutton a:active,
+.tooltip span.greybutton input.submit:hover,.tooltip span.greybutton input.submit:focus,.tooltip span.greybutton input.submit:active,.tooltip span.greybutton input.hover {
+    color: #333;
+    background-color: #ccc
+}
+
+.ie .tooltip {
+    filter:- !important;
+}
+
+.tooltip dl {
+	margin:0}
+.ie6 .tooltip dl dt, .ie6 .tooltip dl dd, .ie7 .tooltip dl dt, .ie7 .tooltip dl dd {
+	display:inline}
+.tooltip dl dt {
+    display:inline-block;width:110px}
+.tooltip dl dd {
+    display:inline-block;width:235px;font-weight:normal;margin-left:18px}
+
+#news {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+#news li {
+    padding: 6px 0;
+    margin: 0;
+    border-top: 1px solid #eee
+}
+
+#news li.first {
+    border: none;
+    padding-top: 0
+}
+
+#news .news-title {
+    display: block;
+    font-weight: bold
+}
+
+#news .news-image {
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+    float: left
+}
+
+#news .news-image img {
+    width: 100%;
+    height: 100%
+}
+
+#news .news-link {
+    display:block;
+    text-align:right
+}
+
+.financialStatementPROCESSING,.financialStatementWAITING {
+    padding:10px 30px 10px 0px;
+    background:url('img/progress.gif') right center no-repeat;
+}
+
+.financialStatementType {
+    width: 30%
+}
+
+.actionrow td {
+    padding: 0;
+    border-top: none
+}
+
+.actionrow .actionbuttons {
+    display: block;
+    text-align: center;
+    padding: 6px
+}
+
+.actionrow .view {
+    background: #eee;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer
+}
+
+/** ACCOUNT MANAGEMENT **/
+.greybox {
+    background: #eee;
+    margin-bottom: 1.5em
+}
+
+.greybox label {
+    display: block
+}
+
+#manageBusinessAgreementsForm .greybox label {
+	display: inline;	
+}
+
+.greybox .roundedBorder-4 {
+    margin-bottom: 0
+}
+
+#tiles {
+    list-style-type: none;
+    margin: 0 0 1.5em;
+    padding: 5px;
+}
+
+#tiles .tile {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    width: 211px;
+    height: 148px;
+    text-align: center;
+    display: block;
+    float: left;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    color: #111
+}
+
+#tiles .agreementstate-3 {
+    background-color: #ded;
+    border-color: #070;
+}
+
+#tiles .dependent {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+#tiles .dependentMessage {
+    background-color:#fbe3e4;
+    color:#8a1f11;
+    border: 2px solid #fbc2c4;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 178px;
+    padding: 5px;
+    text-align: left
+}
+
+#tiles .notice {
+    background:#fff6bf;
+    color:#514721;
+    border-color:#ffd324;
+}
+
+#tiles .selectedtile {
+    background-color: #EEE;
+    border-color: #555;
+}
+
+#tiles .greybutton {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 195px;
+    margin: 0
+}
+
+.ie6 #tiles .agreementtitle{
+	height:40px;
+}
+#tiles .agreementtitle {
+    display: block;
+    font-size: 1.2em;
+    font-weight: normal !important;
+    text-align: left;
+    margin-bottom: 0;
+    min-height:40px
+}
+
+#tiles .agreementstatus {
+    display: block;
+    font-weight: bold;
+    text-align: left
+}
+
+#tiles .agreementdate {
+    display: block;
+    font-size: 0.8em;
+    text-align: left;
+    padding-left:25px
+}
+	
+#ma_submit {
+	margin-top:1.5em;
+}
+
+.greybox .testcentrename {
+    font-weight: bold;
+    display: block
+}
+
+.greybox .testcentreaddress {
+    font-weight: bold;
+    display: block
+}
+
+#pointer {
+    background: url('img/taper.png') left bottom no-repeat;
+    height: 45px;
+    margin-top: -1.5em;
+    width: 180px;
+    font-weight: bold;#tiles .tile
+    margin-left: 450px;
+    padding-left: 20px
+}
+
+.reviewbox {
+    min-height: 150px
+}
+
+#tiles .interesttile {
+    background-position:center 25px;
+    background-repeat:no-repeat;
+    cursor:pointer
+}
+
+.ie6 #tiles .interest-CAR {background-image:url('img/interest-CAR.gif')}
+#tiles .interest-CAR {background-image:url('img/interest-CAR.png')}
+
+.ie6 #tiles .interest-BIK {background-image:url('img/interest-BIK.gif')}
+#tiles .interest-BIK {background-image:url('img/interest-BIK.png')}
+
+.ie6 #tiles .interest-TAX {background-image:url('img/interest-TAX.gif')}
+#tiles .interest-TAX {background-image:url('img/interest-TAX.png')}
+
+.ie6 #tiles .interest-LOR {background-image:url('img/interest-LOR.gif')}
+#tiles .interest-LOR {background-image:url('img/interest-LOR.png')}
+
+.ie6 #tiles .interest-BUS {background-image:url('img/interest-BUS.gif')}
+#tiles .interest-BUS {background-image:url('img/interest-BUS.png')}
+
+.ie6 #tiles .interest-CWT {background-image:url('img/interest-CWT.gif')}
+#tiles .interest-CWT {background-image:url('img/interest-CWT.png')}
+
+.ie6 #tiles .interest-ORT {background-image:url('img/interest-ORT.gif')}
+#tiles .interest-ORT {background-image:url('img/interest-ORT.png')}
+
+.ie6 #tiles .interest-ITT {background-image:url('img/interest-ITT.gif')}
+#tiles .interest-ITT {background-image:url('img/interest-ITT.png')}
+
+.ie6 #tiles .interestcheckbox {
+    text-align:center;
+}
+
+#tiles .interestcheckbox {
+    display: block;
+    background:#fff;
+    margin-top:108px;
+    padding: 5px 0
+}
+
+#tiles .interestcheckbox label {
+    display: inline
+}
+
+#tiles .daytile {
+    height:70px;
+    width:70px;
+    margin: 2px;
+    padding: 0;
+    cursor:pointer
+}
+
+#tiles .daycheckbox {
+    display: block;
+    background:#fff;
+    padding: 5px 0;
+    margin-top:18px
+}
+
+.ie7 .greybox .scrollable {
+	position:relative
+}
+
+.ie6 .greybox .scrollable,.ie7 .greybox .scrollable {
+    overflow-x:hidden
+}
+
+.greybox .scrollable {
+    overflow-y: auto;
+    height: 150px;
+    margin-bottom:1.5em
+}
+
+.formtable label {
+    font-weight: normal
+}
+
+.next {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-right: 6px;
+    background-image: url('img/colon.png');
+    background-repeat: no-repeat;
+    background-position: right center
+}
+
+.currentBookingInfo {
+    background: #eee;
+    margin-bottom: 1.5em;
+    padding: 12px
+}
+
+.currentBookingInfo dl {
+    margin: 0 0 12px;
+    padding: 6px 0;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #ddd;
+    text-align: center
+}
+
+.currentBookingInfo dd {
+    display: inline;
+    margin: 0
+}
+
+.currentBookingInfo dt {
+    display: inline;
+    margin: 0 5px 0 15px
+}
+
+.currentBookingFilter .currentBookingInfo {
+    background:#d5edf8;
+    color:#205791;
+}
+
+.currentBookingFilter .currentBookingFilterText {
+    position: relative;
+    top: -1.5em;
+    left: 0;
+    height: 52px;
+    width: 100%;
+    background: url('img/filter.png') top center no-repeat;
+    z-index: -1;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 15px 0 0
+}
+
+.ui-dialog .currentBookingFilter .currentBookingFilterText {
+	background: url('img/filter-white.png') top center no-repeat;
+}
+
+.ui-dialog {
+    position:fixed;
+    font-family:Arial, sans-serif
+}
+
+.ui-widget {
+	font-size:1em;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family:Arial, sans-serif
+}
+
+.ui-widget-header {
+    background:#ccc;
+    font-size:1.5em;
+    font-weight:normal;
+    color:#111;
+    border:none;
+    margin-bottom:4px;
+}
+
+.ui-widget-content {
+    background:#fff;
+}
+
+.ie6 .ui-dialog {
+    position:absolute
+}
+
+.ie6 .ui-widget, .ie7 .ui-widget {
+    text-align:left
+}
+
+.blockUI .progressMessage {
+    padding:10px 10px 10px 20px;
+    font-weight:bold;
+    margin:0;
+    background:url('img/progress.gif') left center no-repeat;
+}
+
+.pullIntoHeading {
+    margin:-5em 0 3em
+}
+
+.ie6 #acceptedCards li, .ie7 #acceptedCards li {
+	display: inline
+}
+
+#acceptedCards li {
+    display: inline-block;
+    width: 40px;
+}
+
+#acceptedCards li span {
+    visibility: hidden;
+}
+
+.specialneedslist ul {
+    margin:0 0 0 1.5em;
+    padding:0;
+    width:340px
+}
+
+.popupHeading {
+    display:none;
+    visibility:hidden
+}
+
+/* Start: JQuery UI autocomplete. */
+.ui-autocomplete {
+    max-height: 140px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding to account for vertical scrollbar */
+    padding-right: 20px;
+}
+
+.ie6 .ui-autocomplete {
+    height: 140px;
+}
+
+/** Remind IE6 that it needs to render this properly! **/
+.ie6 .ui-dialog-content .ajaxContainer {
+	zoom:1
+}
+
+/** Fix the padding so when we go to the bigger sizes, we don't run out of space. */
+.ui-dialog .ui-dialog-content {
+	padding:12px;
+}
+
+/** Text resizing **/
+body.bigger {
+    font-size:87.5%}
+body.biggest {
+    font-size:100%}
+
+body.bigger #tiles .tile {
+    height:190px}
+body.biggest #tiles .tile {
+	height:210px}
+
+body.bigger input.standarddate, body.bigger input.weekbeginningdate {
+	width:80px}
+
+body.biggest input.standarddate, body.biggest input.weekbeginningdate {
+	width:85px}
+
+body.biggest .daterange .daterangeField {
+    width:150px}
+
+
+/******************************************************************************************
+ * * * * * Hidden when the page is loaded with js - only use this if it flickers. * * * * *
+ ******************************************************************************************/
+.js #slotSearchCommand #businessTestCats, .js #slotSearchCommand #instructors, .js #slotSearchCommand #extRetest, .js #slotSearchCommand #specialNeeds, 
+.js #testCentreSearchTypeWrapper, .js .specialNeeds, .js #searchForBookingsCommand .advancedBookingSearch,
+.js #back-button-warning-outer, .js #first-login-outer {
+    display:none}
+    
+/******************************************************************************************
+ * * * * * Service unavailablilty. * * * * *
+ ******************************************************************************************/
+#unavailabilitynotice {
+    background:#28a297;
+    color:#fff;
+    text-align:center;
+    font-size:2em;
+    padding:1em;
+    margin:1.5em 0
+}
+
+#unavailabilitynotice-datetime {
+    font-weight:bold;
+    display:block;
+    font-size:1.5em
+}
+
+div.emailhint {
+    text-align: left;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 10px 176px;
+    background: none;
+    border: none;
+}
+
+div.emailhint a {
+    color: #009;
+}
+
+#useOpeneningWeek {
+	padding-left: 5px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+#manage-cookies-message {
+     padding: 0.5em 2em;
+     background-color: #d5e8f3;
+     font-family: "nta", Arial, sans-serif;
+     font-size: 16px;
+     line-height: 1.31579;
+     font-weight: 400;
+     text-transform: none;
+     margin: 0 auto;
+     max-width: 960px;
+ }
+#manage-cookies-message h3 {
+    line-height: 2;
+}
+
+#manage-cookies-message button {
+    display: inline-block;
+    border: none;
+    padding: 0.45em 1.5em 0.45em 1.5em;
+    color: white;
+    background: #282;
+    cursor: pointer;
+}
+
+@media ( max-width : 640px) {
+    #manage-cookies-message {
+        padding: 0.5em 1em;
+        font-size: 14px;
+        line-height: 1.25;
+    }
+}
+
+@media ( max-width : 480px) {
+    #manage-cookies-message {
+        padding: 0.5em 1em;
+        font-size: 12px;
+        line-height: 1.25;
+    }
+}
+
+#cookie-content {
+    font-size: 120%;
+}
+
+#cookie-content section h1 {
+    font-weight: bold;
+}
+#cookie-content section h2 {
+    display: inline;
+    font-weight: bold;
+}
+#cookie-content section h2.title-bracket {
+    display: inline;
+    font-weight: normal !important;
+}
+#cookie-content section h3 {
+    display: inline;
+    font-weight: bold;
+}
+#cookie-content section h3.title-bracket {
+    display: inline;
+    font-weight: normal !important;
+}
+#cookie-content section {
+    margin-top:1em;
+    margin-bottom:1em;
+}
+#cookie-content section p {
+    margin-bottom:0.5em;
+    margin-top:0.5em;
+}
+#cookie-content section ul {
+    margin-bottom:0.5em;
+}
+#cookie-content section li {
+    margin-bottom:3px;
+    margin-top:3px;
+    margin-left: 2em;
+    list-style: disc;
+}
+#cookie-content section table,
+#cookie-content section tr,
+#cookie-content section th,
+#cookie-content section td {
+    padding: 0.5em;
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+#cookie-content fieldset {
+    border: none;
+}
+#cookie-content section input {
+    margin-left: 1.5em;
+    margin-right: 0.5em;
+}
+
+#cookie-content button {
+    display: inline-block;
+    border: none;
+    padding: 0.45em 1.5em 0.45em 1.5em;
+    color: white;
+    background: #282;
+}
+
+.container-icon-message {
+    display: flex;
+}
+
+.container-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tick-icon-agreement-tiles {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
